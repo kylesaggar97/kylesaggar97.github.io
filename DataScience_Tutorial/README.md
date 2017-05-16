@@ -18,3 +18,20 @@ The Dataframes have been updated, so the index is a DateTime object.  This makes
 	df['2003-01': '2003-05'] 	--> 		Selects all rows in between January 2003 and May 2003, inclusive.
 
 This is very powerful for filtering/selecting/indexing certain rows.
+
+
+Regression Model:
+
+	We can now develeop a regression model for predicting temperature anomaly or data usage.  To train our model, do the following:
+
+		To do so, call linear_model(X, Y) :- where X is a matrix of feature vectors and Y is labels corresponding to these training examples.
+
+		Instead of modeling X as datetime objects, we model X as a matrix, where columns represent: Year|Month|Day, in that order.
+		For example, a row in X would contain [2001, 6, 1] to represent 6/1/2001.  We can then train on X and Y, using this data.
+
+	To make a prediction:
+
+		reg = linear_model(X, Y) 		#Train our model
+		reg.predict([2001, 6, 1])		#Make a prediction for 6/1/2001
+
+
