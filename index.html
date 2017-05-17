@@ -11772,7 +11772,37 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><h1>Installing Libraries:</h1></p>
+<p><h3>Tutorial Content:</h3></p>
+<p><p1>The following sections will be covered in this tutorial:<p1/></p>
+<ul>
+<li>
+<a href="#installing-libraries">Installing Libraries</a>
+</li>
+<li>
+<a href="#loading-parsing">Loading and Parsing Data</a>
+</li>
+<li>
+<a href="#data-processing">Data Processing</a>
+</li>
+<li>
+<a href="#data-analysis-viz">Data Analysis and Visualization</a>
+</li>
+<li>
+<a href="#ml-hyp-testing">Machine Learning and Hypothesis Testing</a>
+</li>
+<li>
+<a href="#insight-policy">Insight and Policy</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h1 id='installing-libraries'>Installing Libraries:</h1></p>
 <p1>The first step is to install the libraries that are imported below. To do this we used a package manager called anaconda. On Linux you can install anaconda by using this command:
 </p1>
 <pre>
@@ -11794,7 +11824,7 @@ conda install -c conda-forge numpy=1.12.1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[211]:</div>
+<div class="prompt input_prompt">In&nbsp;[267]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -11816,14 +11846,14 @@ conda install -c conda-forge numpy=1.12.1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><h1>Loading and Parsing Data:</h1></p>
+<p><h1 id='loading-parsing'>Loading and Parsing Data:</h1></p>
 <p1>Both datasets are downloaded into the project folder. They can accessed HERE(LINK TO GITHUB). The energy data is laoded first. It's raw data is an excel document. In order to load this into the porject call the pandas function read_excel. This will read the excel sheet into a pandas Dataframe. The next step is to name the column headers using the Dataframe.columns function. Print the first five rows with Dataframe.head(5)</p1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[212]:</div>
+<div class="prompt input_prompt">In&nbsp;[268]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Read energy data in from excel spreadsheet</span>
@@ -11844,7 +11874,7 @@ conda install -c conda-forge numpy=1.12.1
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[212]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[268]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -11964,7 +11994,7 @@ conda install -c conda-forge numpy=1.12.1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[213]:</div>
+<div class="prompt input_prompt">In&nbsp;[269]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#loads the climate data</span>
@@ -11983,7 +12013,7 @@ conda install -c conda-forge numpy=1.12.1
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[213]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[269]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12097,7 +12127,7 @@ conda install -c conda-forge numpy=1.12.1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><h1>Data Processing:</h1></p>
+<p><h1 id='data-processing'>Data Processing:</h1></p>
 <p1>The next step is to process the data. In this case we are combining the two datasets into one data frame for easier access and comparison of data.
 </p1>
 <br><br>
@@ -12107,7 +12137,7 @@ conda install -c conda-forge numpy=1.12.1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[214]:</div>
+<div class="prompt input_prompt">In&nbsp;[270]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#creates a new column in the format of year-month-day</span>
@@ -12138,7 +12168,7 @@ conda install -c conda-forge numpy=1.12.1
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[214]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[270]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12252,7 +12282,7 @@ conda install -c conda-forge numpy=1.12.1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[215]:</div>
+<div class="prompt input_prompt">In&nbsp;[271]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#merges the two dataframes on the date</span>
@@ -12274,7 +12304,7 @@ conda install -c conda-forge numpy=1.12.1
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[215]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[271]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12443,14 +12473,14 @@ conda install -c conda-forge numpy=1.12.1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><h1>Data Analysis and Visualization:</h1></p>
+<p><h1 id='data-analysis-viz'>Data Analysis and Visualization:</h1></p>
 <p1>Next, we will visualze the data using methods from matplotlibs library. First we will graph the energy usage dataset. We will create a graph for each industry showing how much energy they use based on years. Since the data is represented as energy usage by month we have created a method below called <code>getAvgs</code> which returns the average energy usage for a particular sector for each year from 1973 - 2014.</p1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[216]:</div>
+<div class="prompt input_prompt">In&nbsp;[272]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Gets the monthly average in Energy Usage for a sector over time.</span>
@@ -12489,7 +12519,7 @@ conda install -c conda-forge numpy=1.12.1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[217]:</div>
+<div class="prompt input_prompt">In&nbsp;[273]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Graphs X and Y datapoints, and sets the title, xLabel, and yLabel</span>
@@ -12507,7 +12537,7 @@ conda install -c conda-forge numpy=1.12.1
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">xLabel</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">yLabel</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope of the line of best fit is: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span><span class="k">slope</span>)
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope of the line of best fit is: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="k">slope</span>)
 </pre></div>
 
 </div>
@@ -12517,7 +12547,7 @@ conda install -c conda-forge numpy=1.12.1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[218]:</div>
+<div class="prompt input_prompt">In&nbsp;[274]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Plot average monthly energy usage per year over time</span>
@@ -13170,7 +13200,7 @@ AElFTkSuQmCC
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Slope of the line of best fit is: 62
+<pre>Slope of the line of best fit is: 62.529150
 </pre>
 </div>
 </div>
@@ -13190,7 +13220,7 @@ AElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[219]:</div>
+<div class="prompt input_prompt">In&nbsp;[275]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Compute monthly averages for each individual sector</span>
@@ -13817,7 +13847,7 @@ ScYp8Tg7aEoAAAAASUVORK5CYII=
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Slope of the line of best fit is: 16
+<pre>Slope of the line of best fit is: 16.002637
 </pre>
 </div>
 </div>
@@ -14400,7 +14430,7 @@ REREJISUXImIiIiEkJIrERERkRD6fxuM46nV7LwhAAAAAElFTkSuQmCC
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Slope of the line of best fit is: 21
+<pre>Slope of the line of best fit is: 21.360539
 </pre>
 </div>
 </div>
@@ -15052,7 +15082,7 @@ RU5ErkJggg==
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Slope of the line of best fit is: 2
+<pre>Slope of the line of best fit is: 2.751618
 </pre>
 </div>
 </div>
@@ -15687,7 +15717,7 @@ DGSSJEmNGcgkSZIa+wpHxH1PQM8HGwAAAABJRU5ErkJggg==
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Slope of the line of best fit is: 22
+<pre>Slope of the line of best fit is: 22.419588
 </pre>
 </div>
 </div>
@@ -16277,7 +16307,7 @@ YII=
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Slope of the line of best fit is: 46
+<pre>Slope of the line of best fit is: 46.465518
 </pre>
 </div>
 </div>
@@ -16286,9 +16316,18 @@ YII=
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p1>From the graphs above it is clear that all of the industries have a increase in energy usage over time. From analyzing the slope of each line of best fit, the electric sector has had the fastest increase in energy usage and the industrial sector has had the slowest. Next we will graph teh temperature anomalies over time using the <code>getAnomalies</code> method which returns an array of the years and anomalies for a given range.</p1>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[220]:</div>
+<div class="prompt input_prompt">In&nbsp;[276]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">climate_data</span> <span class="o">=</span> <span class="n">climate_data</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
@@ -16302,7 +16341,7 @@ YII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[221]:</div>
+<div class="prompt input_prompt">In&nbsp;[277]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getAnomalies</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
@@ -16323,7 +16362,7 @@ YII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[222]:</div>
+<div class="prompt input_prompt">In&nbsp;[278]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">anomalies</span><span class="p">,</span> <span class="n">years</span> <span class="o">=</span> <span class="n">getAnomalies</span><span class="p">(</span><span class="mi">1820</span><span class="p">,</span> <span class="mi">2012</span><span class="p">)</span>
@@ -17214,7 +17253,7 @@ MzMb05zMmJmZ2Zj2/wHpM8C2zz4fjgAAAABJRU5ErkJggg==
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Slope of the line of best fit is: 0
+<pre>Slope of the line of best fit is: 0.006442
 </pre>
 </div>
 </div>
@@ -17225,7 +17264,7 @@ MzMb05zMmJmZ2Zj2/wHpM8C2zz4fjgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[223]:</div>
+<div class="prompt input_prompt">In&nbsp;[279]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">anomalies</span><span class="p">,</span> <span class="n">years</span> <span class="o">=</span> <span class="n">getAnomalies</span><span class="p">(</span><span class="mi">1973</span><span class="p">,</span> <span class="mi">2012</span><span class="p">)</span>
@@ -18017,7 +18056,7 @@ H4OFqnQqQvTtAAAAAElFTkSuQmCC
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Slope of the line of best fit is: 0
+<pre>Slope of the line of best fit is: 0.026938
 </pre>
 </div>
 </div>
@@ -18026,9 +18065,20 @@ H4OFqnQqQvTtAAAAAElFTkSuQmCC
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p1>The first graph shows the temperature anomalies from 1820 to 2012. From this graph it is easy to see the consistent and overall rise in temperature over time. However, since the energy data is only from 1973 to 2012 we will also graph this subset in the temperature dataset. This is shown in the second graph. Both graphs have a consistent increase. However, it can be seen that the data flucuates rapidly from year to year. This is due to the fact that the temperature is measured as an anomily which is essentially the deviation that the value is from the average temperature from 1950 -1981. Anomalies can easily change from positive to negative as temperature flucautes slightly. Due to the flucuating data is can be difficult to find a strong correlation between the temperature and energy consumption.</p1>
+<br><br>
+<p1>Below we calculate the correlation coefficient for the total energy consumption and monthly anomaly from 1973 - 2012. We calculate this using methods in scipy's stats class. The correlation value is the first return value showing the data has a correlation coefficient value of .31. This shows that the two datasets are positively correlated but not as strongly as we had predicted they would be (again, this is partly due to th fact that the temperature data is represented in anomalies). </p1>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[224]:</div>
+<div class="prompt input_prompt">In&nbsp;[280]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stats</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">climate_energy_data</span><span class="p">[</span><span class="s1">&#39;P.E. Total Consumption&#39;</span><span class="p">],</span> <span class="n">climate_energy_data</span><span class="p">[</span><span class="s1">&#39;Monthly Anomaly&#39;</span><span class="p">])</span>
@@ -18042,7 +18092,7 @@ H4OFqnQqQvTtAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[224]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[280]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -18057,7 +18107,7 @@ H4OFqnQqQvTtAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[225]:</div>
+<div class="prompt input_prompt">In&nbsp;[281]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">avgs</span> <span class="o">=</span> <span class="n">getAvgs</span><span class="p">(</span><span class="n">climate_energy_data</span><span class="p">)</span>
@@ -18832,7 +18882,7 @@ Zta13JAxMzOzruWGjJmZmXUtN2TMzMysa7khY2ZmZl3r31icGrddvSdpAAAAAElFTkSuQmCC
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Slope of the line of best fit is: 0
+<pre>Slope of the line of best fit is: 0.000393
 </pre>
 </div>
 </div>
@@ -18846,7 +18896,7 @@ Zta13JAxMzOzruWGjJmZmXUtN2TMzMysa7khY2ZmZl3r31icGrddvSdpAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>^^^can still show this to show that there is not a perfect correlation</p>
+<p><p1>Lastly, we attempted to graph the termperature data with respect to the energy consumption. This graph clearly shows that the two datasets are not linearly correlated. Originally, we had predicted that there would be a linear relationship between the amount of energy used and the rise in temperature.<p1></p>
 
 </div>
 </div>
@@ -18856,13 +18906,13 @@ Zta13JAxMzOzruWGjJmZmXUtN2TMzMysa7khY2ZmZl3r31icGrddvSdpAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1>Machine Learning and Hypothesis Testing:</h1>
+<h1 id='ml-hyp-testing'>Machine Learning and Hypothesis Testing:</h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[226]:</div>
+<div class="prompt input_prompt">In&nbsp;[282]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">trainTestSplit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
@@ -18878,7 +18928,7 @@ Zta13JAxMzOzruWGjJmZmXUtN2TMzMysa7khY2ZmZl3r31icGrddvSdpAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[227]:</div>
+<div class="prompt input_prompt">In&nbsp;[283]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">linear_model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
@@ -18897,7 +18947,7 @@ Zta13JAxMzOzruWGjJmZmXUtN2TMzMysa7khY2ZmZl3r31icGrddvSdpAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[228]:</div>
+<div class="prompt input_prompt">In&nbsp;[284]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_data</span> <span class="o">=</span> <span class="n">climate_energy_data</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
@@ -18917,7 +18967,7 @@ Zta13JAxMzOzruWGjJmZmXUtN2TMzMysa7khY2ZmZl3r31icGrddvSdpAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[229]:</div>
+<div class="prompt input_prompt">In&nbsp;[285]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Yhat</span> <span class="o">=</span> <span class="n">energy_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -18930,7 +18980,7 @@ Zta13JAxMzOzruWGjJmZmXUtN2TMzMysa7khY2ZmZl3r31icGrddvSdpAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[230]:</div>
+<div class="prompt input_prompt">In&nbsp;[286]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getLoss</span><span class="p">(</span><span class="n">Ytrue</span><span class="p">,</span> <span class="n">Yhat</span><span class="p">):</span>
@@ -18944,7 +18994,7 @@ Zta13JAxMzOzruWGjJmZmXUtN2TMzMysa7khY2ZmZl3r31icGrddvSdpAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[231]:</div>
+<div class="prompt input_prompt">In&nbsp;[287]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plotLoss</span><span class="p">(</span><span class="n">loss</span><span class="p">,</span> <span class="n">avg_loss</span><span class="p">):</span>
@@ -18966,7 +19016,7 @@ Zta13JAxMzOzruWGjJmZmXUtN2TMzMysa7khY2ZmZl3r31icGrddvSdpAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[232]:</div>
+<div class="prompt input_prompt">In&nbsp;[288]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span> <span class="o">=</span> <span class="n">getLoss</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Yhat</span><span class="p">)</span>
@@ -19365,7 +19415,7 @@ ZmZmVuAmyczMzKzATZKZmZlZgZskMzMzs4L/A2M8X1Ao+PwrAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[233]:</div>
+<div class="prompt input_prompt">In&nbsp;[289]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="n">total_data</span><span class="p">[</span><span class="s1">&#39;Monthly Anomaly&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -19381,7 +19431,7 @@ ZmZmVuAmyczMzKzATZKZmZlZgZskMzMzs4L/A2M8X1Ao+PwrAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[234]:</div>
+<div class="prompt input_prompt">In&nbsp;[290]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Yhat</span> <span class="o">=</span> <span class="n">temp_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -19394,7 +19444,7 @@ ZmZmVuAmyczMzKzATZKZmZlZgZskMzMzs4L/A2M8X1Ao+PwrAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[235]:</div>
+<div class="prompt input_prompt">In&nbsp;[291]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span> <span class="o">=</span> <span class="n">getLoss</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Yhat</span><span class="p">)</span>
@@ -19810,7 +19860,8 @@ ECJJklI4hEiSpBQOIZIkKYVDiCRJSuEQIkmSUjiESJKkFN+q8zXWWsiqyAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1>Insight and Policy:</h1>
+<p><h1 id='insight-policy'>Insight and Policy:</h1></p>
+<p1>Maybe Need a conclusion idk if this is the same thing</p1>
 </div>
 </div>
 </div>
