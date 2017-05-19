@@ -11847,7 +11847,7 @@ conda install -c conda-forge numpy=1.12.1
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1 id='loading-parsing'>Loading and Parsing Data:</h1></p>
-<p1>Both datasets are downloaded into the project folder, and can accessed <a href = "https://github.com/kylesaggar97/kylesaggar97.github.io/tree/master/DataScience_Tutorial">here</a>. First, we will load the energy data. If you are not familiar with python pandas' library, there are a few built-in functions that make it extremely easy to read data into our dataframe.  The energy data is contained in an excel spreadsheet, so we will use Pandas.read_excel() method (code shown below) to parse our spreadsheet and get a dataframe.</p1>
+<p1>Both datasets are downloaded into the project folder, and can be accessed <a href = "https://github.com/kylesaggar97/kylesaggar97.github.io/tree/master/DataScience_Tutorial">here</a>. First, we will load the energy data. If you are not familiar with python pandas' library, there are a few built-in functions that make it extremely easy to read data into our dataframe.  The energy data is contained in an excel spreadsheet, so we will use <code>Pandas.read_excel()</code> method (code shown below) to parse our spreadsheet and get a dataframe.</p1>
 <p1>When using read_excel, the first parameter we pass in is the path to our excel spreadsheet.  Our second parameter specifies which sheetname, from the excel file, we will be parsing.  The header parameter specifies where to start parsing from, in our case row 10 contains the column headers, so we start there.  Lastly, the skiprows parameter takes in a list of rows to skip in our spreadsheet; in other words, Pandas will ignore these rows when parsing.</p1>
 </div>
 </div>
@@ -12123,7 +12123,7 @@ conda install -c conda-forge numpy=1.12.1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p1>Now, we repeat the same process for our temperature dataset. This dataset is a text file. Therefore, the numpy method Numpy.genfromtxt() is used to load the data. This method returns an ndarray, containing the data in our textfile. In order to turn it into a dataframe, we can then pass our ndarray object into the Pandas.DataFrame constructor to make our temperature DataFrame.</p1>
+<p1>Now, we repeat the same process for our temperature dataset. This dataset is a text file. Therefore, the numpy method <code>Numpy.genfromtxt()</code> is used to load the data. This method returns an ndarray, containing the data in our textfile. In order to turn it into a dataframe, we can then pass our ndarray object into the Pandas.DataFrame constructor to make our temperature DataFrame.</p1>
 </div>
 </div>
 </div>
